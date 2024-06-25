@@ -15,7 +15,7 @@ function longitudMaxima(numero) {
     }
 }
 
-function colorTheme() {    
+function colorTheme() {
 
     if (tema1 === false && tema2 === false && tema3 === false) {
         tema1 = true;
@@ -28,7 +28,7 @@ function colorTheme() {
         inputPixels.style.backgroundColor = "#f0f6f0";
         futer.style.color = "#f0f6f0";
         logo.style.color = "#f0f6f0";
-        inputPixels.style.color = "#222323";           
+        inputPixels.style.color = "#222323";
         tema1 = false;
         return;
     }
@@ -48,7 +48,7 @@ function colorTheme() {
         inputPixels.style.backgroundColor = "#fff2df";
         futer.style.color = "#fff2df";
         logo.style.color = "#fff2df";
-        inputPixels.style.color = "#ef243a"; 
+        inputPixels.style.color = "#ef243a";
         tema3 = false;
         return;
     }
@@ -56,5 +56,22 @@ function colorTheme() {
 }
 
 function iniciarPrograma() {
-    
+
+    const PIXELEMREM = 16;
+    const PIXELCM = 0.0264;
+    const PIXELMETRO = 3787.8787;
+
+    let pixeles = inputPixels.value;
+    let emRem = pixeles / PIXELEMREM;    
+    let cm = pixeles * PIXELCM;
+    let metros = pixeles / PIXELMETRO;
+
+
+
+    document.getElementById("emremResultado").innerHTML = emRem;
+    document.getElementById("centimetrosResultado").innerHTML = cm;
+    document.getElementById("metrosResultado").innerHTML = metros;
+
+
+
 }
