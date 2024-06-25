@@ -20,7 +20,7 @@
 
     main section {
         display: flex;
-        justify-content: center;        
+        justify-content: center;
     }
 
     section input {
@@ -29,25 +29,18 @@
         background-color: var(--color-input);
         color: var(--color-letra);
         height: 5rem;
-        width: 20rem;        
+        width: 20rem;
         text-align: center;
-        font-size: 5.8rem;                
-        
+        font-size: 5.8rem;
+        padding: 0 0 0.25rem 0.4rem;
     }
 
-    section input::placeholder {        
+    section input::placeholder {
         font-size: 2rem;
         position: absolute;
         width: 20rem;
-        margin-top: 1.6rem;
-        
-        
-        
-        
+        margin-top: 1.75rem;
     }
-
-
-    
 
     footer {
         margin-top: auto;
