@@ -1,5 +1,7 @@
 :root {
-    --color-fondo: #363636;
-    --color-letra: #363636;
-    --color-input: #ececec;   
+    --color-oscuro: #222323;
+    --color-claro: #f0f6f0;
+    --color-placeholder1: #545555;
+    --color-placeholder2: #0a2e4486;
+    --color-placeholder3: #ef243c83;
 }
