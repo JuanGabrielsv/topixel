@@ -19,17 +19,17 @@
     <script defer src="./js/main.js"></script>
 </head>
 
-<body>
+<body id="body">
     <header>
-        <h1>toPixel</h1>
+        <h1 id="logo" onclick="colorTheme()">toPixel</h1>
     </header>
     <main>
         <section>
-            <input type="number" name="number" id="" placeholder="introduce los pixels" maxlength="9" oninput="longitudMaxima(this)">
+            <input id="input" type="number" name="number" placeholder="introduce los pixels" maxlength="9" oninput="longitudMaxima(this)" required>
 
         </section>
     </main>
-    <footer>
+    <footer id="futer">
         <h2>2024 toPixel | www.juangabrielsv.dev</h2>
     </footer>
 
