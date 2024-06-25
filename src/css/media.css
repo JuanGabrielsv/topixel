@@ -5,42 +5,13 @@
         flex-direction: column;
         min-height: 100vh;
         background-color: var(--color-oscuro);
-        font-family: "EnterCommand", system-ui;        
+        font-family: "EnterCommand", system-ui;
     }
 
-    header {                
-        display: flex;
-        justify-content: center;                
-        padding: 1rem;
-    }
-
-    header h1 {        
-        font-size: 3rem;
-        color: var(--color-claro);
-    }
-
-    main section {
+    header {
         display: flex;
         justify-content: center;
-    }
-
-    section input {
-        font-family: 'EnterCommand', system-ui;
-        border: none;
-        background-color: var(--color-claro);
-        color: var(--color-oscuro);
-        height: 5rem;
-        width: 20rem;
-        text-align: center;
-        font-size: 5.8rem;
-        padding: 0 0 0.25rem 0.4rem;        
-    }
-
-    section input::placeholder {
-        font-size: 2rem;
-        position: absolute;
-        width: 20rem;
-        margin-top: 1.75rem;
+        padding: 1rem;
     }
 
     footer {
@@ -50,4 +21,79 @@
         padding: 1em;
         color: var(--color-claro);
     }
+
+    .header-h1 {
+        font-size: 3rem;
+        color: var(--color-claro);
+    }
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            font-family: "EnterCommand", system-ui;
+            font-size: 3rem;
+            width: 20rem;
+            background-color: var(--color-oscuro);
+            border: 0.5rem solid var(--color-claro);
+            color: var(--color-claro);
+            height: 6rem;
+
+        }
+    }
+
+    .input-1 {
+        font-family: 'EnterCommand', system-ui;
+        border: none;
+        background-color: var(--color-claro);
+        color: var(--color-oscuro);
+        height: 5rem;
+        width: 20rem;
+        text-align: center;
+        font-size: 5.8rem;
+        padding: 0 0 0.25rem 0.4rem;
+        outline: none;        
+    }
+
+    .input-1::placeholder {
+        font-size: 2rem;
+        position: absolute;
+        width: 19rem;
+        margin-top: 1.75rem;
+    }
+
+    .section-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2rem;
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            padding-left: 20%;
+        }
+
+        input {
+            all: unset;
+            height: 2rem;
+            width: 12rem;
+            font-size: 3.5rem;
+            text-align: right;
+            background-color: var(--color-oscuro);
+            border: none;
+            font-family: "EnterCommand", system-ui;
+            color: var(--color-claro);
+        }
+
+        p {
+            color: var(--color-claro);
+            font-size: 2rem;
+            margin-left: 0.3rem;
+        }
+    }
+
 }
