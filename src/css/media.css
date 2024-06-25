@@ -4,19 +4,19 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        background-color: var(--color-fondo);
-        font-family: "EnterCommand", system-ui;
-        font-size: 2rem;
+        background-color: var(--color-oscuro);
+        font-family: "EnterCommand", system-ui;        
     }
 
-    header {
+    header {                
+        display: flex;
+        justify-content: center;                
         padding: 1rem;
     }
 
-    header h1 {
-        text-align: center;
-        color: var(--color-input);
-        font-size: 3.5rem;        
+    header h1 {        
+        font-size: 3rem;
+        color: var(--color-claro);
     }
 
     main section {
@@ -27,8 +27,8 @@
     section input {
         font-family: 'EnterCommand', system-ui;
         border: none;
-        background-color: var(--color-input);
-        color: var(--color-letra);
+        background-color: var(--color-claro);
+        color: var(--color-oscuro);
         height: 5rem;
         width: 20rem;
         text-align: center;
@@ -48,6 +48,6 @@
         font-size: small;
         text-align: center;
         padding: 1em;
-        color: var(--color-input);
+        color: var(--color-claro);
     }
 }

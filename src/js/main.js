@@ -1,5 +1,11 @@
+let logo = document.getElementById("logo");
+let body = document.getElementById("body");
+let input = document.getElementById("input");
+let futer = document.getElementById("futer");
 let tema1 = false;
 let tema2 = true;
+let tema3 = true;
+
 
 function longitudMaxima(numero) {
     let valor = numero.value;
@@ -9,14 +15,11 @@ function longitudMaxima(numero) {
 }
 
 function colorTheme() {
-    let logo = document.getElementById("logo");
-    let body = document.getElementById("body");
-    let input = document.getElementById("input");
-    let futer = document.getElementById("futer");
 
-    if (tema1 === false && tema2 === false) {
+    if (tema1 === false && tema2 === false && tema3 === false) {
         tema1 = true;
-        tema2 = true;        
+        tema2 = true;
+        tema3 = true;
     }
 
     while (tema1 === true) {
@@ -36,6 +39,16 @@ function colorTheme() {
         logo.style.color = "#fcffcc";
         input.style.color = "#0a2e44";
         tema2 = false;
+        return;
+    }
+
+    while (tema3 === true) {
+        body.style.backgroundColor = "#ef243a";
+        input.style.backgroundColor = "#fff2df";
+        futer.style.color = "#fff2df";
+        logo.style.color = "#fff2df";
+        input.style.color = "#ef243a";
+        tema3 = false;
         return;
     }
 
