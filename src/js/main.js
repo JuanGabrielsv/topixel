@@ -10,8 +10,8 @@ let tema3 = true;
 
 function longitudMaxima(numero) {
     let valor = numero.value;
-    if (valor.length > 9) {
-        numero.value = valor.slice(0, 9);
+    if (valor.length > 7) {
+        numero.value = valor.slice(0, 7);
     }
 }
 
@@ -56,22 +56,37 @@ function colorTheme() {
 }
 
 function iniciarPrograma() {
+    const PULGADA = 2.54;
 
-    const PIXELEMREM = 16;
-    const PIXELCM = 0.0264;
-    const PIXELMETRO = 3787.8787;
+    let pixels = document.getElementById("inputPixels").value;
+    let ppp = document.getElementById("inputPpp").value;
+    let centimetros = 0;
+    let milimetros = 0;
+    let metros = 0;
 
-    let pixeles = inputPixels.value;
-    let emRem = pixeles / PIXELEMREM;    
-    let cm = pixeles * PIXELCM;
-    let metros = pixeles / PIXELMETRO;
+    if (pixels === "") {
+        pixels = 0;
+    }
 
+    if (ppp === "") {
+        ppp = 0;
+    }
 
+    // Calcular los cm.
+    centimetros = Number((pixels / ppp) * PULGADA).toFixed(3);
+    
+    // Calcular los milímetros.
+    milimetros = Number(centimetros * 10).toFixed(3);
 
-    document.getElementById("emremResultado").innerHTML = emRem;
-    document.getElementById("centimetrosResultado").innerHTML = cm;
+    // Calcular los metros.
+    metros = Number(centimetros / 100).toFixed(3);
+
+    document.getElementById("centimetrosResultado").innerHTML = centimetros;
+    document.getElementById("milimetrosResultado").innerHTML = milimetros;
     document.getElementById("metrosResultado").innerHTML = metros;
 
 
 
+    
+    
 }
