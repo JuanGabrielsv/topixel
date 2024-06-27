@@ -26,9 +26,9 @@
 
         <section class="section-1">
             <input class="input-pixels" id="inputPixels" type="number" placeholder= "introduce los pixels"
-                oninput="longitudMaxima(this)" required>
+                oninput="longitudMaxima(this, 7)" required>
             <input class="input-ppp" id="inputPpp" type="number" placeholder="introduce los ppp"
-                oninput="longitudMaxima(this)" required>
+                oninput="longitudMaxima(this, 5)" required>
             <button type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
         </section>
 
@@ -46,8 +46,8 @@
                 <p class="parrafo-unidades">m</p>
             </div>
             <div>
-                <p class="parrafo-resultado" id="cuadradoResultado">0</p>
-                <p class="parrafo-unidades">px<sup>2</sup></p>
+                <p class="parrafo-resultado" id="cuadradoResultadoMm">0</p>
+                <p class="parrafo-unidades">px<sup>2</sup>/cm</p>
             </div>
         </section>
 

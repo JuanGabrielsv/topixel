@@ -8,10 +8,10 @@ let tema2 = true;
 let tema3 = true;
 
 
-function longitudMaxima(numero) {
+function longitudMaxima(numero, cantidad) {
     let valor = numero.value;
-    if (valor.length > 7) {
-        numero.value = valor.slice(0, 7);
+    if (valor.length > cantidad) {
+        numero.value = valor.slice(0, cantidad);
     }
 }
 
@@ -55,8 +55,14 @@ function colorTheme() {
 
 }
 
+function truncar(n) {
+    let t = n.toString();
+    let regex = /(\d*.\d{0,4})/;
+    return t.match(regex)[0];
+}
+
 function iniciarPrograma() {
-    const PULGADA = 2.54;
+    const CMPULGADA = 2.54;
 
     let pixels = document.getElementById("inputPixels").value;
     let ppp = document.getElementById("inputPpp").value;
@@ -74,24 +80,26 @@ function iniciarPrograma() {
     }
 
     // Calcular los cm.
-    centimetros = Number((pixels / ppp) * PULGADA);
-    
+    centimetros = Number(((pixels / ppp) * CMPULGADA));
+    //centimetros = Number((pixels * PULGADA) / ppp);
+
     // Calcular los milímetros.
     milimetros = Number(centimetros * 10);
 
     // Calcular los metros.
     metros = Number(centimetros / 100);
 
-    //Calculamos los pixeles por cm²
+    //Calculamos los pixeles por cm².
+    pxCuadrados = Number((ppp * ppp) / CMPULGADA);
     
 
-    document.getElementById("centimetrosResultado").innerHTML = centimetros;
-    document.getElementById("milimetrosResultado").innerHTML = milimetros;
-    document.getElementById("metrosResultado").innerHTML = metros;
-    document.getElementById("cuadradoResultado").innerHTML = pxCuadrados;
+    document.getElementById("centimetrosResultado").innerHTML = truncar(centimetros);
+    document.getElementById("milimetrosResultado").innerHTML = truncar(milimetros);
+    document.getElementById("metrosResultado").innerHTML = truncar(metros);
+    document.getElementById("cuadradoResultadoMm").innerHTML = truncar(pxCuadrados);
 
 
 
-    
-    
+
+
 }

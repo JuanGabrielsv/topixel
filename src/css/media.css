@@ -82,7 +82,7 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: baseline;
-        width: 100%;        
+        width: 90%;        
         padding: 0 2rem 0 0;        
     }
 
@@ -97,9 +97,8 @@
         width: 1rem;        
     }
 
-
-
-
-
+    sup {
+        font-size: 0.85rem;
+    }
 
 }
