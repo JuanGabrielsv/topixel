@@ -30,9 +30,7 @@
     .section-1 {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        
+        align-items: center;        
     }
 
     button {
@@ -44,8 +42,7 @@
         color: var(--color-claro);
         height: 4rem;
         margin-top: 0.2rem;
-        line-height: 0;
-          
+        line-height: 0;          
     }
 
     .section-1 input {
@@ -53,7 +50,7 @@
         border: none;
         background-color: var(--color-claro);
         color: var(--color-oscuro);
-        height: 4rem;
+        height: 3.5rem;
         width: 90%;
         text-align: center;
         font-size: 5.8rem;
@@ -83,16 +80,16 @@
         justify-content: flex-end;
         align-items: baseline;
         width: 90%;        
-        padding: 0 2rem 0 0;        
+        padding: 0 0 0 0;        
     }
 
     .parrafo-resultado {
-        font-size: 3.5rem;        
+        font-size: 3rem;        
         text-align: end;
     }
 
     .parrafo-unidades {
-        font-size: 1.75rem;
+        font-size: 1.50rem;
         margin-left: 0.2rem;
         width: 1rem;        
     }

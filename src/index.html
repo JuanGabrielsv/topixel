@@ -25,35 +25,23 @@
     <main>
 
         <section class="section-1">
-            <input class="input-pixels" id="inputPixels" type="number" placeholder= "introduce los pixels"
+            <input id="inputMetros" type="number" placeholder= "introduce los metros"
                 oninput="longitudMaxima(this, 7)" required>
-            <input class="input-ppp" id="inputPpp" type="number" placeholder="introduce los ppp"
+            <input id="inputPpp" type="number" placeholder="introduce los ppp"
                 oninput="longitudMaxima(this, 5)" required>
-            <button type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
+            <button id="button" type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
         </section>
 
         <section class="section-2">
             <div>
-                <p class="parrafo-resultado" id="milimetrosResultado">0</p>
-                <p class="parrafo-unidades">mm</p>
-            </div>
-            <div>
-                <p class="parrafo-resultado" id="centimetrosResultado">0</p>
-                <p class="parrafo-unidades">cm</p>
-            </div>
-            <div>
                 <p class="parrafo-resultado" id="metrosResultado">0</p>
-                <p class="parrafo-unidades">m</p>
-            </div>
-            <div>
-                <p class="parrafo-resultado" id="cuadradoResultadoMm">0</p>
-                <p class="parrafo-unidades">px<sup>2</sup>/cm</p>
-            </div>
+                <p class="parrafo-unidades" id="textoUnidad">px</p>
+            </div>            
         </section>
 
     </main>
-    <footer id="futer">
-        <h2>2024 toPixel | www.juangabrielsv.dev v0.1.2</h2>
+    <footer id="footer">
+        <h2>2024 toPixel | www.juangabrielsv.dev v0.5</h2>
     </footer>
 
 </body>
