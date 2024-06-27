@@ -63,6 +63,7 @@ function iniciarPrograma() {
     let centimetros = 0;
     let milimetros = 0;
     let metros = 0;
+    let pxCuadrados = 0;
 
     if (pixels === "") {
         pixels = 0;
@@ -73,17 +74,21 @@ function iniciarPrograma() {
     }
 
     // Calcular los cm.
-    centimetros = Number((pixels / ppp) * PULGADA).toFixed(3);
+    centimetros = Number((pixels / ppp) * PULGADA);
     
     // Calcular los milímetros.
-    milimetros = Number(centimetros * 10).toFixed(3);
+    milimetros = Number(centimetros * 10);
 
     // Calcular los metros.
-    metros = Number(centimetros / 100).toFixed(3);
+    metros = Number(centimetros / 100);
+
+    //Calculamos los pixeles por cm²
+    
 
     document.getElementById("centimetrosResultado").innerHTML = centimetros;
     document.getElementById("milimetrosResultado").innerHTML = milimetros;
     document.getElementById("metrosResultado").innerHTML = metros;
+    document.getElementById("cuadradoResultado").innerHTML = pxCuadrados;
 
 
 
