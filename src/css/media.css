@@ -36,7 +36,7 @@
     button {
         font-family: "EnterCommand", system-ui;
         font-size: 3em;
-        width: 90%;
+        width: 18rem;
         background-color: var(--color-oscuro);
         border: 0.1rem solid var(--color-claro);
         color: var(--color-claro);
@@ -50,13 +50,11 @@
         border: none;
         background-color: var(--color-claro);
         color: var(--color-oscuro);
-        height: 3.5rem;
-        width: 90%;
+        height: 3.5rem;          
         text-align: center;
         font-size: 5.8rem;
         padding: 0 0 0.25rem 0.4rem;
-        outline: none;
-        margin-top: 0.2rem;        
+        outline: none;        
     }
 
     ::placeholder {
@@ -98,4 +96,10 @@
         font-size: 0.85rem;
     }
 
+}
+
+@media (max-width: 620px) {
+    .parrafo-resultado {
+        font-size: 3rem;
+    }
 }

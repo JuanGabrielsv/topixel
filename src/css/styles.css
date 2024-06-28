@@ -1,11 +1,109 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;       
+    padding: 0;
 }
 
-body {    
-    background-color: var(--color-claro);
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-oscuro);
+    min-height: 100vh;
 }
+
+header {
+    font-family: "EnterCommand", system-ui;
+    color: var(--color-claro);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    font-family: "EnterCommand", system-ui;
+    margin-top: auto;
+    color: var(--color-claro);
+    text-align: center;
+    padding: 1rem;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-1 input {
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    font-family: "EnterCommand", system-ui;
+    font-size: 4rem;
+    outline: none;
+    text-align: center;
+    border: none;
+    height: 4rem;
+    width: 18rem;
+    font-size: 5.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+#inputPpp {
+    margin-top: 0.4rem;
+}
+
+input::placeholder {
+    all: unset;
+    opacity: 20%;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    margin-top: 0.4rem;
+    font-family: "EnterCommand", system-ui;
+    font-size: 3rem;
+    border: 0.1rem solid var(--color-claro);
+    height: 4rem;
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: column;    
+}
+
+.section-2 div {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    align-items: baseline;
+}
+
+.parrafo-resultado, .parrafo-unidades {
+    color: var(--color-claro);
+    font-family: "EnterCommand", system-ui;        
+}
+
+.parrafo-resultado {
+    font-size: 5rem;
+}
+
+.parrafo-unidades {
+    margin-left: 0.2rem;
+    font-size: 2rem;
+}
+
 
 

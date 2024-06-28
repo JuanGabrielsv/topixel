@@ -5,12 +5,12 @@ let footer = document.getElementById("footer");
 let inputPpp = document.getElementById("inputPpp");
 let button = document.getElementById("button");
 let textoUnidad = document.getElementById("textoUnidad");
-let metrosResultado = document.getElementById("metrosResultado");
+let pixelResultado = document.getElementById("pixelResultado");
 
 let tema1 = false;
 let tema2 = true;
 let tema3 = true;
-
+let convertir = true;
 
 function longitudMaxima(numero, cantidad) {
     let valor = numero.value;
@@ -32,7 +32,7 @@ function colorTheme() {
         inputMetros.style.color = "#222323";
         inputPpp.style.color = "#222323";
         textoUnidad.style.color = "#f0f6f0";
-        metrosResultado.style.color = "#f0f6f0";
+        pixelResultado.style.color = "#f0f6f0";
         button.style.backgroundColor = "#222323";
         button.style.borderColor = "#f0f6f0";
         button.style.color = "#f0f6f0";
@@ -49,7 +49,7 @@ function colorTheme() {
         inputMetros.style.color = "#0a2e44";
         inputPpp.style.color = "#0a2e44";
         textoUnidad.style.color = "#fcffcc";
-        metrosResultado.style.color = "#fcffcc";
+        pixelResultado.style.color = "#fcffcc";
         button.style.backgroundColor = "#0a2e44";
         button.style.borderColor = "#fcffcc";
         button.style.color = "#fcffcc";
@@ -66,7 +66,7 @@ function colorTheme() {
         inputMetros.style.color = "#ef243a";
         inputPpp.style.color = "#ef243a";
         textoUnidad.style.color = "#fff2df";
-        metrosResultado.style.color = "#fff2df";
+        pixelResultado.style.color = "#fff2df";
         button.style.backgroundColor = "#ef243a";
         button.style.borderColor = "#fff2df";
         button.style.color = "#fff2df";
@@ -86,19 +86,26 @@ function truncar(n) {
     return t.match(regex)[0];
 }
 
-function iniciarPrograma() {    
+function iniciarPrograma() {
     let metros = document.getElementById("inputMetros").value;
     let ppp = document.getElementById("inputPpp").value;
     let pixelesPorCentimetro = ppp / 2.54;
     let pixeles = (metros * 100) * pixelesPorCentimetro;
 
-    if (metros === "") {
-        metros = 0;
+    if (convertir === true && inputMetros.value !== ("") && inputPpp.value !== ("")) {
+        button.innerHTML = ("BORRAR");
+        convertir = false;
+    } else if (convertir === false) {
+        button.innerHTML = ("CONVERTIR");
+        inputMetros.value = ("");
+        inputPpp.value = ("");
+        pixeles = 0;
+        convertir = true;
     }
 
-    if (ppp === "") {
-        ppp = 0;
-    }
+     let resultado = Number(truncar(pixeles));
+     resultado = resultado.toString().replace(".", ",");
+     
 
-    document.getElementById("metrosResultado").innerHTML = Number(truncar(pixeles));
+    document.getElementById("pixelResultado").innerHTML = resultado;
 }
