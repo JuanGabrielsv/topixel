@@ -26,22 +26,22 @@
 
         <section class="section-1">
             <input id="inputMetros" type="number" placeholder= "introduce los metros"
-                oninput="longitudMaxima(this, 7)" required>
+                oninput="longitudMaxima(this, 7)" max="9999999" min="0">
             <input id="inputPpp" type="number" placeholder="introduce los ppp"
-                oninput="longitudMaxima(this, 5)" required>
-            <button id="button" type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
+                oninput="longitudMaxima(this, 5)" max="99999" min="0">
+            <button id="button" onclick="iniciarPrograma()">CONVERTIR</button>
         </section>
 
         <section class="section-2">
             <div>
-                <p class="parrafo-resultado" id="metrosResultado">0</p>
+                <p class="parrafo-resultado" id="pixelResultado">0</p>
                 <p class="parrafo-unidades" id="textoUnidad">px</p>
             </div>            
         </section>
 
     </main>
     <footer id="footer">
-        <h2>2024 toPixel | www.juangabrielsv.dev v0.5</h2>
+        <h2>2024 toPixel | www.juangabrielsv.dev v0.9.1</h2>
     </footer>
 
 </body>
