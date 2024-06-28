@@ -23,27 +23,25 @@
         <h1 id="logo" class="header-h1" onclick="colorTheme()">toPixel</h1>
     </header>
     <main>
+
         <section class="section-1">
-            <input class="input-1" id="inputPixels" type="number" name="number" placeholder="introduce los pixels"
-                oninput="longitudMaxima(this)" onsubmit="iniciarPrograma()" required>
-            <button type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
+            <input id="inputMetros" type="number" placeholder= "introduce los metros"
+                oninput="longitudMaxima(this, 7)" required>
+            <input id="inputPpp" type="number" placeholder="introduce los ppp"
+                oninput="longitudMaxima(this, 5)" required>
+            <button id="button" type="submit" onclick="iniciarPrograma()">CONVERTIR</button>
         </section>
 
         <section class="section-2">
-            <div class="div-centimetros">
-                <p class="centimetros-resultado" id="centimetrosResultado">0</p>
-                <p class="centimetros-texto">cm</p>
-            </div>
-            <div class="div-emrem">
-                <input class="input-emrem" type="number" name="emrem" id="inputEmrem">
-                <p class="emrem-texto">em/rem</p>
-            </div>
-
+            <div>
+                <p class="parrafo-resultado" id="metrosResultado">0</p>
+                <p class="parrafo-unidades" id="textoUnidad">px</p>
+            </div>            
         </section>
 
     </main>
-    <footer id="futer">
-        <h2>2024 toPixel | www.juangabrielsv.dev</h2>
+    <footer id="footer">
+        <h2>2024 toPixel | www.juangabrielsv.dev v0.5</h2>
     </footer>
 
 </body>
