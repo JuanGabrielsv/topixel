@@ -103,9 +103,9 @@ function iniciarPrograma() {
         convertir = true;
     }
 
-     let resultado = Number(truncar(pixeles));
-     resultado = resultado.toString().replace(".", ",");
-     
+    let resultado = Number(truncar(pixeles));
+    resultado = resultado.toString().replace(".", ",");
+
 
     document.getElementById("pixelResultado").innerHTML = resultado;
 }

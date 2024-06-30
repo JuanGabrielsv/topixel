@@ -4,8 +4,6 @@
     padding: 0;
 }
 
-
-
 body {
     display: flex;
     flex-direction: column;
@@ -56,7 +54,6 @@ footer {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-
 }
 
 #inputPpp {
@@ -81,7 +78,7 @@ button {
 
 .section-2 {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .section-2 div {
@@ -91,9 +88,10 @@ button {
     align-items: baseline;
 }
 
-.parrafo-resultado, .parrafo-unidades {
+.parrafo-resultado,
+.parrafo-unidades {
     color: var(--color-claro);
-    font-family: "EnterCommand", system-ui;        
+    font-family: "EnterCommand", system-ui;
 }
 
 .parrafo-resultado {
@@ -104,6 +102,3 @@ button {
     margin-left: 0.2rem;
     font-size: 2rem;
 }
-
-
-
